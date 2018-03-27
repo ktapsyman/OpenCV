@@ -18,8 +18,11 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D CMAKE_INSTALL_PREFIX=/usr/local \
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D INSTALL_C_EXAMPLES=OFF \
+	-D CUDA_GENERATION=Auto\
     -D OPENCV_EXTRA_MODULES_PATH=opencv_contrib/modules \
     -D PYTHON_EXECUTABLE=/usr/bin/python3 \
+	-D WITH_CUDA=ON \
+	-D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-9.0 \
     -D BUILD_EXAMPLES=ON ..
 
 make -j4
